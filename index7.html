@@ -1,0 +1,273 @@
+<link rel="icon" href="https://fav.farm/🔥" />
+<title>Mini Matrix2 </title>
+<style>
+    body {
+        margin: 0;
+      }
+      canvas {
+        width: 100vw;
+        height: 100vh;
+        display: block;
+      }
+      html {
+        box-sizing: border-box;
+      }
+      *, *:before, *:after {
+        box-sizing: inherit;
+      }
+      
+      h1 {
+        font-family: sans-serif;
+      }
+      #background {
+        width: 100vw;
+        height: 100vh;
+        display: block;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        pointer-events: none;
+        border: none;
+      }
+      #content {
+        padding: 1em;
+      }
+      #content>* {
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: x-large;
+        word-spacing: 2pt;
+        color: rgb(0, 189, 0);
+        text-shadow:
+        -3px -0px 2px #000,
+        -2px -0px 2px #000,
+        -1px -0px 2px #000,
+        1px -0px 2px #000,
+        2px -0px 2px #000,
+        3px -0px 2px #000,
+        0px -3px 2px #000,
+        0px -2px 2px #000,
+        0px -1px 2px #000,
+        0px  1px 2px #000,
+        0px  2px 2px #000,
+        0px  3px 2px #000,
+        -3px -3px 2px #000,
+        3px -3px 2px #000,
+        -3px  3px 2px #000,
+        3px  3px 2px #000;
+      }
+      a {
+        color: lightblue;
+      }
+      a:visited {
+        color: lightcoral;
+      }
+      a:hover {
+        color: magenta;
+      }
+      @import url("https://webgl2fundamentals.org/webgl/resources/webgl-tutorials.css");
+
+canvas {
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  background-color: black;
+}
+.overlay-text {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vh;
+    height: 100vh;
+    z-index: 999; /* make sure it's on top of all other elements */
+    text-align: center;
+    font-size: 50px;
+    color: green; /* adjust the color to your liking */
+     /* allow clicks to pass through to underlying elements */
+    margin-top: 50px;
+  }
+.overlay-text2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 1;
+    bottom: 0;
+    width: 100vh;
+    height: 100vh;
+    z-index: 999; /* make sure it's on top of all other elements */
+    text-align: center;
+    font-size: 50px;
+    color: green; /* adjust the color to your liking */
+     /* allow clicks to pass through to underlying elements */
+    margin-top: 200px;
+  }
+.overlay-text3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 1;
+    bottom: 0;
+    width: 100vh;
+    height: 100vh;
+    z-index: 999; /* make sure it's on top of all other elements */
+    text-align: center;
+    font-size: 50px;
+    color: green; /* adjust the color to your liking */
+     /* allow clicks to pass through to underlying elements */
+    margin-top: 400px;
+  }
+  #toggle-text {
+    display: block; /* initial state: text is visible */
+  }
+  .invisible-button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 9999; /* make sure it's on top of other elements */
+    opacity: 0; /* make it invisible */
+    cursor: pointer; /* keep the pointer cursor to indicate it's clickable */
+  }
+  .invisible-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    opacity: 0;
+    cursor: pointer;
+  }
+</style>
+ 
+<iframe id="background" src="https://akdavis83.github.io/Mini-Matrix/">
+  <div class="invisible-button"> 
+</iframe>
+<div id="content"><div class="overlay-text">(Ex 13:12) That thou shalt set apart unto the LORD all that openeth the matrix, and every firstling that cometh of a beast which thou hast; the males shall be the LORD’S.</div>   
+<div id="content"><div class="overlay-text2">(Numbers 18:15) Every thing that openeth the matrix in all flesh, which they bring unto the LORD, whether it be of men or beasts, shall be thine: nevertheless the firstborn of man shalt thou surely redeem, and the firstling of unclean beasts shalt thou redeem.</div>   
+<div id="content"><div class="overlay-text3">Matrix
+    noun
+    
+    
+    1
+    : something within or from which something else originates, develops, or takes form
+    an atmosphere of understanding and friendliness that is the matrix of peace
+    2
+    a
+    : a mold from which a relief (see RELIEF entry 1 sense 6) surface (such as a piece of type) is made
+    b
+    : DIE sense 3a(1)
+    c
+    : an engraved or inscribed die (see DIE entry 2 sense 3) or stamp
+    d
+    : an electroformed impression of a phonograph record used for mass-producing duplicates of the original
+    3
+    a
+    : the natural material (such as soil or rock) in which something (such as a fossil or crystal) is embedded
+    b
+    : material in which something is enclosed or embedded (as for protection or study)
+    4
+    a
+    : the extracellular substance in which tissue cells (as of connective tissue) are embedded
+    b
+    : the thickened epithelium at the base of a fingernail or toenail from which new nail substance develops
+    5
+    a
+    : a rectangular array (see ARRAY entry 2 sense 5) of mathematical elements (such as the coefficients (see COEFFICIENT sense 1) of simultaneous (see SIMULTANEOUS sense 2) linear equations) that can be combined to form sums and products with similar arrays having an appropriate number of rows and columns
+    b
+    : something resembling a mathematical matrix especially in rectangular arrangement of elements into rows and columns
+    c
+    : an array of circuit elements (such as diodes and transistors) for performing a specific function
+    6
+    : a main (see MAIN entry 2 sense 5) clause that contains a subordinate (see SUBORDINATE entry 1) clause
+    <span style="color:green">←</span>Click to the Left for a Hidden Button</div>   
+    <canvas id="c"></canvas>
+    <!--
+  for most samples webgl-utils only provides shader compiling/linking and
+  canvas resizing because why clutter the examples with code that's the same in every sample.
+  See https://webgl2fundamentals.org/webgl/lessons/webgl-boilerplate.html
+  and https://webgl2fundamentals.org/webgl/lessons/webgl-resizing-the-canvas.html
+  for webgl-utils, m3, m4, and webgl-lessons-ui.
+  -->
+  <script src="https://webgl2fundamentals.org/webgl/resources/webgl-utils.js"></script>
+  
+  </div>
+</div>
+<script>
+    'use strict';
+const gl = document.querySelector('#c').getContext('webgl2');
+
+const vs = `#version 300 es
+uniform int numVerts;
+uniform float time;
+
+// hash function from https://www.shadertoy.com/view/4djSRW
+// given a value between 0 and 1
+// returns a value between 0 and 1 that *appears* kind of random
+float hash(float p) {
+  vec2 p2 = fract(vec2(p * 5.3983, p * 5.4427));
+  p2 += dot(p2.yx, p2.xy + vec2(21.5351, 14.3137));
+  return fract(p2.x * p2.y * 95.4337);
+}
+
+void main() {
+  float u = float(gl_VertexID) / float(numVerts);  // goes from 0 to 1
+  float off = floor(time + u) / 1000.0;            // changes once per second per vertex
+  float x = hash(u + off) * 2.0 - 1.0;             // random position
+  float y = fract(time + u) * -2.0 + 1.0;          // 1.0 ->  -1.0
+
+  gl_Position = vec4(x, y, 0, 1);
+  gl_PointSize = 2.0;
+}
+`;
+
+const fs = `#version 300 es
+precision highp float;
+
+out vec4 outColor;
+
+void main() {
+  outColor = vec4(0, 1, 0, 1);
+}
+`;
+
+// setup GLSL program
+const program = webglUtils.createProgramFromSources(gl, [vs, fs]);
+const numVertsLoc = gl.getUniformLocation(program, 'numVerts');
+const timeLoc = gl.getUniformLocation(program, 'time');
+
+// Make a buffer with just a count in it.
+
+const numVerts = 40000000;
+
+// draw
+function render(time) {
+  time *= 0.000000001;  // convert to seconds
+
+  webglUtils.resizeCanvasToDisplaySize(gl.canvas);
+  gl.viewport(1, 1, gl.canvas.width, gl.canvas.height);
+
+  gl.useProgram(program);
+
+  // tell the shader the number of verts
+  gl.uniform1i(numVertsLoc, numVerts);
+  // tell the shader the time
+  gl.uniform1f(timeLoc, time);
+
+  const offset = 0;
+  gl.drawArrays(gl.TRIANGLES, offset, numVerts);
+
+  requestAnimationFrame(render);
+}
+requestAnimationFrame(render);
+
+</script>
+
+
+  
+    <button class="invisible-link" onclick="window.location.href='https://akdavis83.github.io/Mini-Matrix/';"> </button>
+    </div>
