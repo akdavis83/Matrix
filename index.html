@@ -1,5 +1,5 @@
 <link rel="icon" href="https://fav.farm/🔥" />
-<title>Mini Matrix2 </title>
+<title>Matrix</title>
 <style>
     body {
         margin: 0;
@@ -123,29 +123,59 @@ canvas {
   #toggle-text {
     display: block; /* initial state: text is visible */
   }
-  .invisible-button {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    z-index: 9999; /* make sure it's on top of other elements */
-    opacity: 0; /* make it invisible */
-    cursor: pointer; /* keep the pointer cursor to indicate it's clickable */
-  }
-  .invisible-link {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    opacity: 0;
+  
+  /* Make the image container take up the full screen */
+  .photo-button {
+    /* Resize the image to a small size */
+    width: 100px;
+    height: 100px;
+  
+    /* Add a border radius to give it a rounded shape */
+    border-radius: 50%;
+  
+    /* Add a border to give it a button-like appearance */
+    border: 2px solid #ccc;
+  
+    /* Add some padding to give it some space around the image */
+    padding: 5px;
+  
+    /* Make the cursor a pointer when hovered */
     cursor: pointer;
+  
+    /* Add some hover effects to give it a nice touch */
+    transition: all 0.3s ease-in-out;
+    margin: 10px;
+    z-index: 1000;
+  }
+  
+  .photo-button:hover {
+    /* Change the border color on hover */
+    border-color: #0cdb13;
+  
+    /* Add some box shadow to give it a nice effect */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  .photo-button-link {
+    /* Make the link a block element */
+    display: inline-block;
+  
+    /* Add some padding to give it some space around the image */
+    padding: 0.5px;
+  
+    /* Remove the underline from the link */
+    text-decoration: none;
+  }
+  
+  .photo-button-link:hover {
+    /* Add some hover effects to give it a nice touch */
+    background-color: #001801;
+    border-radius: 50%;
+    box-shadow: 0 0 2ch rgba(0, 0, 0, 0.2);
   }
 </style>
  
 <iframe id="background" src="https://akdavis83.github.io/Mini-Matrix/">
-  <div class="invisible-button"> 
+  
 </iframe>
 <div id="content"><div class="overlay-text">(Ex 13:12) That thou shalt set apart unto the LORD all that openeth the matrix, and every firstling that cometh of a beast which thou hast; the males shall be the LORD’S.</div>   
 <div id="content"><div class="overlay-text2">(Numbers 18:15) Every thing that openeth the matrix in all flesh, which they bring unto the LORD, whether it be of men or beasts, shall be thine: nevertheless the firstborn of man shalt thou surely redeem, and the firstling of unclean beasts shalt thou redeem.</div>   
@@ -184,7 +214,7 @@ canvas {
     : an array of circuit elements (such as diodes and transistors) for performing a specific function
     6
     : a main (see MAIN entry 2 sense 5) clause that contains a subordinate (see SUBORDINATE entry 1) clause
-    <span style="color:green">←</span>Click to the Left for a Hidden Button</div>   
+    <span style="color:green">←</span>Click the Matrix Button on the left</div>   
     <canvas id="c"></canvas>
     <!--
   for most samples webgl-utils only provides shader compiling/linking and
@@ -268,6 +298,6 @@ requestAnimationFrame(render);
 </script>
 
 
-  
-    <button class="invisible-link" onclick="window.location.href='https://akdavis83.github.io/Mini-Matrix/';"> </button>
-    </div>
+<a href="https://akdavis83.github.io/Mini-Matrix/" target="_blank" class="photo-button-link">
+  <img src="https://plus.unsplash.com/premium_photo-1673688152102-b24caa6e8725?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Your Photo" class="photo-button">
+</a>
